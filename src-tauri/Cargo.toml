@@ -1,0 +1,20 @@
+[package]
+name = "coin_flipper"
+version = "0.1.0"
+description = "coin flipper"
+authors = ["logan thompson"]
+edition = "2021"
+
+[lib]
+name = "coin_flipper_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
